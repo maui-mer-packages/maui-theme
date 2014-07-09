@@ -1,0 +1,36 @@
+Name        : maui-theme
+Version     : 0.2.90
+Release     : 1
+Group       : Applications/System
+License     : GPLv2+ and CC-BY-SA
+Summary     : Maui theme
+Description : Provides Maui theme for different programs.
+URL         : https://github.com/mauios/maui-theme.git
+Sources     : 
+    - "%{name}-%{version}.tar.xz"
+SetupOptions: -q -n %{name}-%{version}/upstream
+BuildArch   : noarch
+NoFiles     : True
+
+PkgBR:
+    - cmake
+
+Configure: cmake
+
+SubPackages:
+    - Name: maui-syslinux-splash
+      AsWholeName: True
+      Summary: Maui splash screen for boot loaders
+      Description: |
+        This package contains Maui splash screen for boot loaders.
+      Group: System/Base
+      Files:
+          - "%{_datadir}/pixmaps/syslinux-splash.png"
+    - Name: plymouth-theme-maui
+      AsWholeName: True
+      Summary: Plymouth "Maui" theme
+      Description: |
+        This package contains the "Maui" theme for Plymouth.
+      Group: System/Base
+      Files:
+          - "%{_datadir}/plymouth/themes/maui"
