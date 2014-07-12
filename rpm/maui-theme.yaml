@@ -27,7 +27,8 @@ PkgConfigBR:
     - Qt5Qml
     - Qt5Quick
 
-Configure: cmake
+Configure: none
+Builder: none
 
 SubPackages:
     - Name: maui-syslinux-splash

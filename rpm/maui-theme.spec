@@ -101,10 +101,10 @@ This package contains the "Maui" style for QtQuick Controls.
 
 %build
 # >> build pre
+%kde5_make
 # << build pre
 
-%cmake . 
-make %{?_smp_mflags}
+
 
 # >> build post
 # << build post
@@ -112,8 +112,8 @@ make %{?_smp_mflags}
 %install
 rm -rf %{buildroot}
 # >> install pre
+%kde5_make_install
 # << install pre
-%make_install
 
 # >> install post
 # << install post
