@@ -14,7 +14,18 @@ NoFiles     : True
 
 PkgBR:
     - extra-cmake-modules
-    - kde5-filesystem
+    - kde5-rpm-macros
+    - qt5-tools
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Test
+    - Qt5Qml
+    - Qt5Quick
 
 Configure: cmake
 

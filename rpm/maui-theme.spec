@@ -17,8 +17,18 @@ BuildArch:  noarch
 URL:        https://github.com/mauios/maui-theme.git
 Source0:    %{name}-%{version}.tar.xz
 Source100:  maui-theme.yaml
+BuildRequires:  pkgconfig(Qt5Core)
+BuildRequires:  pkgconfig(Qt5DBus)
+BuildRequires:  pkgconfig(Qt5Xml)
+BuildRequires:  pkgconfig(Qt5Network)
+BuildRequires:  pkgconfig(Qt5Gui)
+BuildRequires:  pkgconfig(Qt5Widgets)
+BuildRequires:  pkgconfig(Qt5Test)
+BuildRequires:  pkgconfig(Qt5Qml)
+BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  extra-cmake-modules
-BuildRequires:  kde5-filesystem
+BuildRequires:  kde5-rpm-macros
+BuildRequires:  qt5-tools
 
 %description
 Provides Maui theme for different programs.
@@ -51,8 +61,6 @@ This package contains the "Maui" theme for grub.
 Summary:    Maui icon theme
 Group:      System/Base
 Requires:   kde5-breeze-icon-theme
-Requires(post): /bin/touch
-Requires(post): %{_bindir}/gtk-update-icon-cache
 
 %description -n maui-icon-theme
 This package contains the "Maui" icon theme.
@@ -62,8 +70,6 @@ This package contains the "Maui" icon theme.
 Summary:    Maui cursor theme
 Group:      System/Base
 Requires:   kde5-filesystem
-Requires(post): /bin/touch
-Requires(post): %{_bindir}/gtk-update-icon-cache
 
 %description -n maui-cursor-theme
 This package contains the "Maui" cursor theme.
@@ -111,26 +117,6 @@ rm -rf %{buildroot}
 
 # >> install post
 # << install post
-
-%post -n maui-icon-theme
-/bin/touch --no-create %{_datadir}/icons/hicolor || :
-%{_bindir}/gtk-update-icon-cache \
-  --quiet %{_datadir}/icons/hicolor 2> /dev/null|| :
-
-%postun -n maui-icon-theme
-/bin/touch --no-create %{_datadir}/icons/hicolor || :
-%{_bindir}/gtk-update-icon-cache \
-  --quiet %{_datadir}/icons/hicolor 2> /dev/null|| :
-
-%post -n maui-cursor-theme
-/bin/touch --no-create %{_datadir}/icons/hicolor || :
-%{_bindir}/gtk-update-icon-cache \
-  --quiet %{_datadir}/icons/hicolor 2> /dev/null|| :
-
-%postun -n maui-cursor-theme
-/bin/touch --no-create %{_datadir}/icons/hicolor || :
-%{_bindir}/gtk-update-icon-cache \
-  --quiet %{_datadir}/icons/hicolor 2> /dev/null|| :
 
 
 %files -n maui-syslinux-splash
