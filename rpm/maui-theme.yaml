@@ -13,7 +13,7 @@ BuildArch   : noarch
 NoFiles     : True
 
 PkgBR:
-    - cmake
+    - extra-cmake-modules
     - kde5-filesystem
 
 Configure: cmake

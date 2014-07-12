@@ -17,7 +17,7 @@ BuildArch:  noarch
 URL:        https://github.com/mauios/maui-theme.git
 Source0:    %{name}-%{version}.tar.xz
 Source100:  maui-theme.yaml
-BuildRequires:  cmake
+BuildRequires:  extra-cmake-modules
 BuildRequires:  kde5-filesystem
 
 %description
