@@ -14,6 +14,7 @@ NoFiles     : True
 
 PkgBR:
     - cmake
+    - kde5-filesystem
 
 Configure: cmake
 
@@ -34,3 +35,53 @@ SubPackages:
       Group: System/Base
       Files:
           - "%{_datadir}/plymouth/themes/maui"
+    - Name: grub-theme-maui
+      AsWholeName: True
+      Summary: Grub "Maui" theme
+      Description: |
+        This package contains the "Maui" theme for grub.
+      Group: System/Base
+      Files:
+          - "/boot/grub/themes/maui"
+    - Name: maui-icon-theme
+      AsWholeName: True
+      Summary: Maui icon theme
+      Description: |
+        This package contains the "Maui" icon theme.
+      Group: System/Base
+      Requires:
+          - kde5-breeze-icon-theme
+      Files:
+          - "%{_kde5_datadir}/icons/maui/*"
+          - "%exclude %{_kde5_datadir}/icons/maui/cursors"
+    - Name: maui-cursor-theme
+      AsWholeName: True
+      Summary: Maui cursor theme
+      Description: |
+        This package contains the "Maui" cursor theme.
+      Group: System/Base
+      Requires:
+          - kde5-filesystem
+      Files:
+          - "%{_kde5_datadir}/icons/maui/cursors"
+    - Name: maui-wallpapers
+      AsWholeName: True
+      Summary: Maui wallpapers
+      Description: |
+        This package contains wallpapers from the "Maui" visual style.
+      Group: System/Base
+      Requires:
+          - kde5-filesystem
+      Files:
+          - "%{_kde5_datadir}/wallpapers/*"
+    - Name: qt5-qtquickcontrols-maui-style
+      AsWholeName: True
+      Summary: QtQuick Controls "Maui" style
+      Description: |
+        This package contains the "Maui" style for QtQuick Controls.
+      Group: System/Base
+      Requires:
+          - qt5-qtquickcontrols
+      Files:
+          - "%doc COPYING AUTHORS"
+          - "%{_kde5_libdir}/qml/QtQuick/Controls/Styles/Maui/*"

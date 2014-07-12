@@ -18,6 +18,7 @@ URL:        https://github.com/mauios/maui-theme.git
 Source0:    %{name}-%{version}.tar.xz
 Source100:  maui-theme.yaml
 BuildRequires:  cmake
+BuildRequires:  kde5-filesystem
 
 %description
 Provides Maui theme for different programs.
@@ -36,6 +37,54 @@ Group:      System/Base
 
 %description -n plymouth-theme-maui
 This package contains the "Maui" theme for Plymouth.
+
+
+%package -n grub-theme-maui
+Summary:    Grub "Maui" theme
+Group:      System/Base
+
+%description -n grub-theme-maui
+This package contains the "Maui" theme for grub.
+
+
+%package -n maui-icon-theme
+Summary:    Maui icon theme
+Group:      System/Base
+Requires:   kde5-breeze-icon-theme
+Requires(post): /bin/touch
+Requires(post): %{_bindir}/gtk-update-icon-cache
+
+%description -n maui-icon-theme
+This package contains the "Maui" icon theme.
+
+
+%package -n maui-cursor-theme
+Summary:    Maui cursor theme
+Group:      System/Base
+Requires:   kde5-filesystem
+Requires(post): /bin/touch
+Requires(post): %{_bindir}/gtk-update-icon-cache
+
+%description -n maui-cursor-theme
+This package contains the "Maui" cursor theme.
+
+
+%package -n maui-wallpapers
+Summary:    Maui wallpapers
+Group:      System/Base
+Requires:   kde5-filesystem
+
+%description -n maui-wallpapers
+This package contains wallpapers from the "Maui" visual style.
+
+
+%package -n qt5-qtquickcontrols-maui-style
+Summary:    QtQuick Controls "Maui" style
+Group:      System/Base
+Requires:   qt5-qtquickcontrols
+
+%description -n qt5-qtquickcontrols-maui-style
+This package contains the "Maui" style for QtQuick Controls.
 
 
 %prep
@@ -63,6 +112,26 @@ rm -rf %{buildroot}
 # >> install post
 # << install post
 
+%post -n maui-icon-theme
+/bin/touch --no-create %{_datadir}/icons/hicolor || :
+%{_bindir}/gtk-update-icon-cache \
+  --quiet %{_datadir}/icons/hicolor 2> /dev/null|| :
+
+%postun -n maui-icon-theme
+/bin/touch --no-create %{_datadir}/icons/hicolor || :
+%{_bindir}/gtk-update-icon-cache \
+  --quiet %{_datadir}/icons/hicolor 2> /dev/null|| :
+
+%post -n maui-cursor-theme
+/bin/touch --no-create %{_datadir}/icons/hicolor || :
+%{_bindir}/gtk-update-icon-cache \
+  --quiet %{_datadir}/icons/hicolor 2> /dev/null|| :
+
+%postun -n maui-cursor-theme
+/bin/touch --no-create %{_datadir}/icons/hicolor || :
+%{_bindir}/gtk-update-icon-cache \
+  --quiet %{_datadir}/icons/hicolor 2> /dev/null|| :
+
 
 %files -n maui-syslinux-splash
 %defattr(-,root,root,-)
@@ -75,3 +144,35 @@ rm -rf %{buildroot}
 %{_datadir}/plymouth/themes/maui
 # >> files plymouth-theme-maui
 # << files plymouth-theme-maui
+
+%files -n grub-theme-maui
+%defattr(-,root,root,-)
+/boot/grub/themes/maui
+# >> files grub-theme-maui
+# << files grub-theme-maui
+
+%files -n maui-icon-theme
+%defattr(-,root,root,-)
+%{_kde5_datadir}/icons/maui/*
+%exclude %{_kde5_datadir}/icons/maui/cursors
+# >> files maui-icon-theme
+# << files maui-icon-theme
+
+%files -n maui-cursor-theme
+%defattr(-,root,root,-)
+%{_kde5_datadir}/icons/maui/cursors
+# >> files maui-cursor-theme
+# << files maui-cursor-theme
+
+%files -n maui-wallpapers
+%defattr(-,root,root,-)
+%{_kde5_datadir}/wallpapers/*
+# >> files maui-wallpapers
+# << files maui-wallpapers
+
+%files -n qt5-qtquickcontrols-maui-style
+%defattr(-,root,root,-)
+%doc COPYING AUTHORS
+%{_kde5_libdir}/qml/QtQuick/Controls/Styles/Maui/*
+# >> files qt5-qtquickcontrols-maui-style
+# << files qt5-qtquickcontrols-maui-style
