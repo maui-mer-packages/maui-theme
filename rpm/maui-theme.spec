@@ -44,6 +44,7 @@ This package contains Maui splash screen for boot loaders.
 %package -n plymouth-theme-maui
 Summary:    Plymouth "Maui" theme
 Group:      System/Base
+Requires:   plymouth-plugin-two-step
 
 %description -n plymouth-theme-maui
 This package contains the "Maui" theme for Plymouth.

@@ -45,6 +45,8 @@ SubPackages:
       Description: |
         This package contains the "Maui" theme for Plymouth.
       Group: System/Base
+      Requires:
+          - plymouth-plugin-two-step
       Files:
           - "%{_datadir}/plymouth/themes/maui"
     - Name: grub-theme-maui
