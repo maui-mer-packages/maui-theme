@@ -128,7 +128,9 @@ rm -rf %{buildroot}
 
 %files -n plymouth-theme-maui
 %defattr(-,root,root,-)
-%{_datadir}/plymouth/themes/maui
+%dir %{_datadir}/plymouth/themes/maui
+%{_datadir}/plymouth/themes/maui/*.png
+%{_datadir}/plymouth/themes/maui/maui.plymouth
 # >> files plymouth-theme-maui
 # << files plymouth-theme-maui
 

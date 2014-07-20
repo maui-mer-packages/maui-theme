@@ -48,7 +48,9 @@ SubPackages:
       Requires:
           - plymouth-plugin-two-step
       Files:
-          - "%{_datadir}/plymouth/themes/maui"
+          - "%dir %{_datadir}/plymouth/themes/maui"
+          - "%{_datadir}/plymouth/themes/maui/*.png"
+          - "%{_datadir}/plymouth/themes/maui/maui.plymouth"
     - Name: grub-theme-maui
       AsWholeName: True
       Summary: Grub "Maui" theme
