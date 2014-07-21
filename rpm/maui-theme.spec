@@ -29,6 +29,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  extra-cmake-modules
 BuildRequires:  kde5-rpm-macros
 BuildRequires:  qt5-tools
+BuildRequires:  kf5-plasma-devel
 
 %description
 Provides Maui theme for different programs.

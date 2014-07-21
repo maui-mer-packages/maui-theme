@@ -16,6 +16,7 @@ PkgBR:
     - extra-cmake-modules
     - kde5-rpm-macros
     - qt5-tools
+    - kf5-plasma-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
