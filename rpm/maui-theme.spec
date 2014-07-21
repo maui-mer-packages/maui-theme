@@ -85,6 +85,15 @@ Requires:   kde5-filesystem
 This package contains wallpapers from the "Maui" visual style.
 
 
+%package -n maui-plasma-theme
+Summary:    Plasma "Maui" theme
+Group:      System/Base
+Requires:   kde5-filesystem
+
+%description -n maui-plasma-theme
+This package contains the "Maui" theme for Plasma.
+
+
 %package -n qt5-qtquickcontrols-maui-style
 Summary:    QtQuick Controls "Maui" style
 Group:      System/Base
@@ -158,6 +167,12 @@ rm -rf %{buildroot}
 %{_kde5_datadir}/wallpapers/*
 # >> files maui-wallpapers
 # << files maui-wallpapers
+
+%files -n maui-plasma-theme
+%defattr(-,root,root,-)
+%{_kde5_datadir}/plasma/desktoptheme/maui/
+# >> files maui-plasma-theme
+# << files maui-plasma-theme
 
 %files -n qt5-qtquickcontrols-maui-style
 %defattr(-,root,root,-)

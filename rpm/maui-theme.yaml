@@ -90,6 +90,16 @@ SubPackages:
           - kde5-filesystem
       Files:
           - "%{_kde5_datadir}/wallpapers/*"
+    - Name: maui-plasma-theme
+      AsWholeName: True
+      Summary: Plasma "Maui" theme
+      Description: |
+        This package contains the "Maui" theme for Plasma.
+      Group: System/Base
+      Requires:
+          - kde5-filesystem
+      Files:
+          - "%{_kde5_datadir}/plasma/desktoptheme/maui/"
     - Name: qt5-qtquickcontrols-maui-style
       AsWholeName: True
       Summary: QtQuick Controls "Maui" style
