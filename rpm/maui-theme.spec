@@ -179,6 +179,6 @@ rm -rf %{buildroot}
 %files -n qt5-qtquickcontrols-maui-style
 %defattr(-,root,root,-)
 %doc COPYING AUTHORS
-%{_kde5_libdir}/qml/QtQuick/Controls/Styles/Maui/*
+%{_kde5_qmldir}/QtQuick/Controls/Styles/Maui/*
 # >> files qt5-qtquickcontrols-maui-style
 # << files qt5-qtquickcontrols-maui-style

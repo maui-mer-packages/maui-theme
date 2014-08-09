@@ -112,4 +112,4 @@ SubPackages:
           - hawaii-framework
       Files:
           - "%doc COPYING AUTHORS"
-          - "%{_kde5_libdir}/qml/QtQuick/Controls/Styles/Maui/*"
+          - "%{_kde5_qmldir}/QtQuick/Controls/Styles/Maui/*"
