@@ -30,7 +30,6 @@ BuildRequires:  extra-cmake-modules
 BuildRequires:  kde5-rpm-macros
 BuildRequires:  qt5-tools
 BuildRequires:  kf5-plasma-devel
-BuildRequires:  hawaii-framework-devel
 
 %description
 Provides Maui theme for different programs.

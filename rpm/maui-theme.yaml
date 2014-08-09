@@ -17,7 +17,6 @@ PkgBR:
     - kde5-rpm-macros
     - qt5-tools
     - kf5-plasma-devel
-    - hawaii-framework-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
