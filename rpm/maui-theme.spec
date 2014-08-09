@@ -30,6 +30,7 @@ BuildRequires:  extra-cmake-modules
 BuildRequires:  kde5-rpm-macros
 BuildRequires:  qt5-tools
 BuildRequires:  kf5-plasma-devel
+BuildRequires:  hawaii-framework-devel
 
 %description
 Provides Maui theme for different programs.
@@ -99,6 +100,7 @@ This package contains the "Maui" theme for Plasma.
 Summary:    QtQuick Controls "Maui" style
 Group:      System/Base
 Requires:   qt5-qtquickcontrols
+Requires:   hawaii-framework
 
 %description -n qt5-qtquickcontrols-maui-style
 This package contains the "Maui" style for QtQuick Controls.

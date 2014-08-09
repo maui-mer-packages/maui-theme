@@ -17,6 +17,7 @@ PkgBR:
     - kde5-rpm-macros
     - qt5-tools
     - kf5-plasma-devel
+    - hawaii-framework-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -109,6 +110,7 @@ SubPackages:
       Group: System/Base
       Requires:
           - qt5-qtquickcontrols
+          - hawaii-framework
       Files:
           - "%doc COPYING AUTHORS"
           - "%{_kde5_libdir}/qml/QtQuick/Controls/Styles/Maui/*"
