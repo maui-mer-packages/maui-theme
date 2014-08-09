@@ -27,6 +27,7 @@ BuildRequires:  pkgconfig(Qt5Test)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  extra-cmake-modules
+BuildRequires:  kf5-rpm-macros
 BuildRequires:  kde5-rpm-macros
 BuildRequires:  qt5-tools
 BuildRequires:  kf5-plasma-devel
@@ -113,7 +114,7 @@ This package contains the "Maui" style for QtQuick Controls.
 
 %build
 # >> build pre
-%kde5_make
+%kf5_make
 # << build pre
 
 
@@ -124,7 +125,7 @@ This package contains the "Maui" style for QtQuick Controls.
 %install
 rm -rf %{buildroot}
 # >> install pre
-%kde5_make_install
+%kf5_make_install
 # << install pre
 
 # >> install post
@@ -179,6 +180,6 @@ rm -rf %{buildroot}
 %files -n qt5-qtquickcontrols-maui-style
 %defattr(-,root,root,-)
 %doc COPYING AUTHORS
-%{_kde5_qmldir}/QtQuick/Controls/Styles/Maui/*
+%{_kf5_qmldir}/QtQuick/Controls/Styles/Maui/*
 # >> files qt5-qtquickcontrols-maui-style
 # << files qt5-qtquickcontrols-maui-style
