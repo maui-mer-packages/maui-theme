@@ -15,9 +15,8 @@ NoFiles     : True
 PkgBR:
     - extra-cmake-modules
     - kf5-rpm-macros
-    - kde5-rpm-macros
     - qt5-tools
-    - kf5-plasma-devel
+    - plasma-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -68,10 +67,10 @@ SubPackages:
         This package contains the "Maui" icon theme.
       Group: System/Base
       Requires:
-          - kde5-breeze-icon-theme
+          - breeze-icon-theme
       Files:
-          - "%{_kde5_datadir}/icons/maui/*"
-          - "%exclude %{_kde5_datadir}/icons/maui/cursors"
+          - "%{_kf5_iconsdir}/maui/*"
+          - "%exclude %{_kf5_iconsdir}/maui/cursors"
     - Name: maui-cursor-theme
       AsWholeName: True
       Summary: Maui cursor theme
@@ -79,9 +78,9 @@ SubPackages:
         This package contains the "Maui" cursor theme.
       Group: System/Base
       Requires:
-          - kde5-filesystem
+          - kf5-filesystem
       Files:
-          - "%{_kde5_datadir}/icons/maui/cursors"
+          - "%{_kf5_iconsdir}/maui/cursors"
     - Name: maui-wallpapers
       AsWholeName: True
       Summary: Maui wallpapers
@@ -89,9 +88,9 @@ SubPackages:
         This package contains wallpapers from the "Maui" visual style.
       Group: System/Base
       Requires:
-          - kde5-filesystem
+          - kf5-filesystem
       Files:
-          - "%{_kde5_datadir}/wallpapers/*"
+          - "%{_kf5_wallpapersdir}/*"
     - Name: maui-plasma-theme
       AsWholeName: True
       Summary: Plasma "Maui" theme
@@ -99,9 +98,9 @@ SubPackages:
         This package contains the "Maui" theme for Plasma.
       Group: System/Base
       Requires:
-          - kde5-filesystem
+          - kf5-filesystem
       Files:
-          - "%{_kde5_datadir}/plasma/desktoptheme/maui/"
+          - "%{_kf5_sharedir}/plasma/desktoptheme/maui/"
     - Name: qt5-qtquickcontrols-maui-style
       AsWholeName: True
       Summary: QtQuick Controls "Maui" style

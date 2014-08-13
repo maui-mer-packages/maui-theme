@@ -28,9 +28,8 @@ BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  extra-cmake-modules
 BuildRequires:  kf5-rpm-macros
-BuildRequires:  kde5-rpm-macros
 BuildRequires:  qt5-tools
-BuildRequires:  kf5-plasma-devel
+BuildRequires:  plasma-devel
 
 %description
 Provides Maui theme for different programs.
@@ -63,7 +62,7 @@ This package contains the "Maui" theme for grub.
 %package -n maui-icon-theme
 Summary:    Maui icon theme
 Group:      System/Base
-Requires:   kde5-breeze-icon-theme
+Requires:   breeze-icon-theme
 
 %description -n maui-icon-theme
 This package contains the "Maui" icon theme.
@@ -72,7 +71,7 @@ This package contains the "Maui" icon theme.
 %package -n maui-cursor-theme
 Summary:    Maui cursor theme
 Group:      System/Base
-Requires:   kde5-filesystem
+Requires:   kf5-filesystem
 
 %description -n maui-cursor-theme
 This package contains the "Maui" cursor theme.
@@ -81,7 +80,7 @@ This package contains the "Maui" cursor theme.
 %package -n maui-wallpapers
 Summary:    Maui wallpapers
 Group:      System/Base
-Requires:   kde5-filesystem
+Requires:   kf5-filesystem
 
 %description -n maui-wallpapers
 This package contains wallpapers from the "Maui" visual style.
@@ -90,7 +89,7 @@ This package contains wallpapers from the "Maui" visual style.
 %package -n maui-plasma-theme
 Summary:    Plasma "Maui" theme
 Group:      System/Base
-Requires:   kde5-filesystem
+Requires:   kf5-filesystem
 
 %description -n maui-plasma-theme
 This package contains the "Maui" theme for Plasma.
@@ -154,26 +153,26 @@ rm -rf %{buildroot}
 
 %files -n maui-icon-theme
 %defattr(-,root,root,-)
-%{_kde5_datadir}/icons/maui/*
-%exclude %{_kde5_datadir}/icons/maui/cursors
+%{_kf5_iconsdir}/maui/*
+%exclude %{_kf5_iconsdir}/maui/cursors
 # >> files maui-icon-theme
 # << files maui-icon-theme
 
 %files -n maui-cursor-theme
 %defattr(-,root,root,-)
-%{_kde5_datadir}/icons/maui/cursors
+%{_kf5_iconsdir}/maui/cursors
 # >> files maui-cursor-theme
 # << files maui-cursor-theme
 
 %files -n maui-wallpapers
 %defattr(-,root,root,-)
-%{_kde5_datadir}/wallpapers/*
+%{_kf5_wallpapersdir}/*
 # >> files maui-wallpapers
 # << files maui-wallpapers
 
 %files -n maui-plasma-theme
 %defattr(-,root,root,-)
-%{_kde5_datadir}/plasma/desktoptheme/maui/
+%{_kf5_sharedir}/plasma/desktoptheme/maui/
 # >> files maui-plasma-theme
 # << files maui-plasma-theme
 
