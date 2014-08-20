@@ -95,6 +95,15 @@ Requires:   kf5-filesystem
 This package contains the "Maui" theme for Plasma.
 
 
+%package -n maui-hawaii-theme
+Summary:    Hawaii shell "Maui" theme
+Group:      System/Base
+Requires:   kf5-filesystem
+
+%description -n maui-hawaii-theme
+This package contains the "Maui" theme for the Hawaii shell.
+
+
 %package -n qt5-qtquickcontrols-maui-style
 Summary:    QtQuick Controls "Maui" style
 Group:      System/Base
@@ -175,6 +184,12 @@ rm -rf %{buildroot}
 %{_kf5_sharedir}/plasma/desktoptheme/maui/
 # >> files maui-plasma-theme
 # << files maui-plasma-theme
+
+%files -n maui-hawaii-theme
+%defattr(-,root,root,-)
+%{_kf5_sharedir}/hawaii/styles/
+# >> files maui-hawaii-theme
+# << files maui-hawaii-theme
 
 %files -n qt5-qtquickcontrols-maui-style
 %defattr(-,root,root,-)

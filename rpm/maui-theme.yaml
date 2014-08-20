@@ -101,6 +101,16 @@ SubPackages:
           - kf5-filesystem
       Files:
           - "%{_kf5_sharedir}/plasma/desktoptheme/maui/"
+    - Name: maui-hawaii-theme
+      AsWholeName: True
+      Summary: Hawaii shell "Maui" theme
+      Description: |
+        This package contains the "Maui" theme for the Hawaii shell.
+      Group: System/Base
+      Requires:
+          - kf5-filesystem
+      Files:
+          - "%{_kf5_sharedir}/hawaii/styles/"
     - Name: qt5-qtquickcontrols-maui-style
       AsWholeName: True
       Summary: QtQuick Controls "Maui" style
