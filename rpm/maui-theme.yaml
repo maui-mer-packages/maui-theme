@@ -111,6 +111,7 @@ SubPackages:
           - kf5-filesystem
       Files:
           - "%{_kf5_sharedir}/hawaii/styles/"
+          - "%{_kf5_qmldir}/Hawaii/Shell/Controls/Styles/Maui/"
     - Name: qt5-qtquickcontrols-maui-style
       AsWholeName: True
       Summary: QtQuick Controls "Maui" style

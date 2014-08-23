@@ -188,6 +188,7 @@ rm -rf %{buildroot}
 %files -n maui-hawaii-theme
 %defattr(-,root,root,-)
 %{_kf5_sharedir}/hawaii/styles/
+%{_kf5_qmldir}/Hawaii/Shell/Controls/Styles/Maui/
 # >> files maui-hawaii-theme
 # << files maui-hawaii-theme
 
