@@ -9,7 +9,7 @@ Name:       maui-theme
 # << macros
 
 Summary:    Maui theme
-Version:    0.3.90
+Version:    0.4.0
 Release:    1
 Group:      Applications/System
 License:    GPLv2+ and CC-BY-SA
